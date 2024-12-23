@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Check if the current route is the home page
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,54 +18,136 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <>
-      {/* Header */}
-      <header
-        className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-          isScrolled ? 'bg-transparent backdrop-blur-sm' : 'bg-green-600'
-        }`}
-      >
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
-          <div className="text-2xl font-bold text-white">
-            <Link to="/">Green 4 Africa</Link>
-          </div>
-          <nav>
-            <ul className="flex space-x-6">
-              <li>
-                <Link to="/" className="text-white hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-white hover:underline">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/products" className="text-white hover:underline">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-white hover:underline">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
+        isScrolled || !isHomePage
+          ? "bg-green-600 text-white shadow-lg"
+          : "bg-transparent text-white"
+      }`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center py-6 sm:px-6 lg:px-16">
+        {/* Logo */}
+        <Link to="/" className="flex items-center">
+          <img
+            src="/logo.png" // Replace with your Green 4 Africa logo path
+            alt="Green 4 Africa"
+            className="h-10 mr-2"
+          />
+          <span className="text-2xl font-bold text-white">Green 4 Africa</span>
+        </Link>
 
-      {/* Spacer */}
-      <div className="h-16"></div>
-    </>
+        {/* Mobile Menu Toggle (visible only on mobile) */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white focus:outline-none"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        {/* Desktop Navigation (hidden on mobile) */}
+        <nav className="hidden lg:flex items-center space-x-8">
+          <ul className="flex space-x-12 items-center">
+            <li>
+              <Link to="/" className="hover:underline text-white">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:underline text-white">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/products" className="hover:underline text-white">
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects" className="hover:underline text-white">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:underline text-white">
+                Contact
+              </Link>
+            </li>
+            {/* CTA Button */}
+            <li>
+              <Link
+                to="/get-involved"
+                className="bg-white text-green-600 px-4 py-2 rounded-md hover:bg-gray-200"
+              >
+                Get Involved
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      {/* Mobile Menu (visible only on mobile when open) */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-green-600 text-white p-6 space-y-4">
+          <ul>
+            <li>
+              <Link to="/" className="block hover:underline text-white">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="block hover:underline text-white">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects" className="block hover:underline text-white">
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects" className="block hover:underline text-white">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="block hover:underline text-white">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/get-involved"
+                className="block bg-white text-green-600 px-4 py-2 rounded-md hover:bg-gray-200"
+              >
+                Get Involved
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </header>
   );
 };
 

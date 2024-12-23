@@ -1,17 +1,21 @@
 import React from 'react';
+import Products from '../components/Products';
+import Header from '../components/Header'; // Import the Header component
 
 const Home = () => {
   return (
     <div className="relative">
+      <Header /> {/* Add the Header component here */}
+
       {/* Hero Section */}
       <div
-        className="bg-cover bg-center h-screen relative"
-        style={{ backgroundImage: "url('/Logo.png')" }} 
+        className="bg-cover bg-center min-h-[90vh] relative"
+        style={{ backgroundImage: "url('/Homepage.JPG')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 container mx-auto px-4 flex items-center h-full">
-          <div className="w-full md:w-1/2 text-white">
-            <h1 className="text-5xl font-bold mb-6">
+          <div className="w-full md:w-1/2 text-white mt-28 pt-28">
+            <h1 className="text-5xl font-bold mb-6 ">
               Leading Change for a Sustainable Future
             </h1>
             <p className="text-lg mb-6">
@@ -56,6 +60,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Products />
     </div>
   );
 };
