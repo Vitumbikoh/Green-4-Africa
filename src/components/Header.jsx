@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import MobileMenu from "./MobileMenu";  // Import the MobileMenu component
+import MobileMenu from "./MobileMenu"; // Import the MobileMenu component
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,6 +24,11 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Function to close the mobile menu when a link is clicked
+  const handleMobileMenuClose = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header
@@ -144,7 +149,11 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <MobileMenu isMobileMenuOpen={isMobileMenuOpen} location={location} />
+      <MobileMenu
+        isMobileMenuOpen={isMobileMenuOpen}
+        location={location}
+        toggleMobileMenu={handleMobileMenuClose}
+      />
     </header>
   );
 };

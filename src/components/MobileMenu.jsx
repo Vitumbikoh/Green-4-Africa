@@ -1,15 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MobileMenu = ({ isMobileMenuOpen, location }) => {
+const MobileMenu = ({ isMobileMenuOpen, location, toggleMobileMenu }) => {
+  const handleLinkClick = () => {
+    // Close the menu when a link is clicked
+    toggleMobileMenu(false);
+  };
+
   return (
-    <div className={`lg:hidden ${isMobileMenuOpen ? "block" : "hidden"} bg-green-600 text-white p-6 space-y-4`}>
+    <div
+      className={`lg:hidden ${
+        isMobileMenuOpen ? "block" : "hidden"
+      } bg-green-600 text-white p-6 space-y-4`}
+    >
       <ul>
         <li>
           <Link
             to="/"
+            onClick={handleLinkClick}
             className={`block ${
-              location.pathname === "/" ? "text-gray-400 underline" : "text-white hover:text-gray-400 hover:underline"
+              location.pathname === "/"
+                ? "text-gray-400 underline"
+                : "text-white hover:text-gray-400 hover:underline"
             }`}
           >
             Home
@@ -18,6 +30,7 @@ const MobileMenu = ({ isMobileMenuOpen, location }) => {
         <li>
           <Link
             to="/about"
+            onClick={handleLinkClick}
             className={`block ${
               location.pathname === "/about"
                 ? "text-gray-400 underline"
@@ -30,6 +43,7 @@ const MobileMenu = ({ isMobileMenuOpen, location }) => {
         <li>
           <Link
             to="/products"
+            onClick={handleLinkClick}
             className={`block ${
               location.pathname === "/products"
                 ? "text-gray-400 underline"
@@ -42,6 +56,7 @@ const MobileMenu = ({ isMobileMenuOpen, location }) => {
         <li>
           <Link
             to="/projects"
+            onClick={handleLinkClick}
             className={`block ${
               location.pathname === "/projects"
                 ? "text-gray-400 underline"
@@ -54,6 +69,7 @@ const MobileMenu = ({ isMobileMenuOpen, location }) => {
         <li>
           <Link
             to="/contact"
+            onClick={handleLinkClick}
             className={`block ${
               location.pathname === "/contact"
                 ? "text-gray-400 underline"
@@ -66,6 +82,7 @@ const MobileMenu = ({ isMobileMenuOpen, location }) => {
         <li>
           <Link
             to="/get-involved"
+            onClick={handleLinkClick}
             className="block bg-white text-green-600 px-4 py-2 rounded-md hover:bg-gray-200"
           >
             Get Involved
