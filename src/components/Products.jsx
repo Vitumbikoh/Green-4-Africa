@@ -12,13 +12,13 @@ const Products = () => {
       title: 'Youth Empowerment',
       description:
         'Programs fostering resourceful, development-oriented youth for socioeconomic advancement and mindset change.',
-      learnMoreLink: '/about'
+      learnMoreLink: '/about',
     },
     {
       title: 'Natural Resource Management',
       description:
         'Encouraging sustainable resource utilization and conservation to prevent deforestation and manage floods.',
-      learnMoreLink: '/about'
+      learnMoreLink: '/about',
     },
   ];
 
@@ -43,8 +43,9 @@ const Products = () => {
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">{service.title}</h3>
               <p className="text-gray-500 mb-6">{service.description}</p>
               <a
-                href="/about"
+                href={service.learnMoreLink || '#'}
                 className="text-green-500 hover:text-green-600 font-semibold"
+                aria-disabled={!service.learnMoreLink}
               >
                 Learn More...
               </a>

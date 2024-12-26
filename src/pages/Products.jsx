@@ -67,12 +67,22 @@ const Products = () => {
                 <p className="text-lg font-bold text-green-800 mb-6">
                   {product.price}
                 </p>
-                <a
-                  href="/about"
-                  className="text-green-600 font-medium hover:text-green-800 underline"
-                >
-                  Learn More
-                </a>
+                {/* Ensure the link is valid or replace with a button */}
+                {product.link ? (
+                  <a
+                    href={product.link}
+                    className="text-green-600 font-medium hover:text-green-800 underline"
+                  >
+                    Learn More
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => alert("Link not available")}
+                    className="text-green-600 font-medium hover:text-green-800 underline"
+                  >
+                    Learn More
+                  </button>
+                )}
               </div>
             </div>
           ))}

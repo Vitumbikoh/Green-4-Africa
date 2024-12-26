@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for routing (if using React Router)
 
 const Projects = () => {
   const projectsData = [
@@ -34,12 +35,10 @@ const Projects = () => {
 
   return (
     <section className="py-16 bg-gray-100 mt-10">
-      <div className="container mx-auto px-6 lg:px-8 ">
+      <div className="container mx-auto px-6 lg:px-8">
         {/* Title Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-green-700 mt-4">
-            Our Projects
-          </h2>
+          <h2 className="text-4xl font-bold text-green-700 mt-4">Our Projects</h2>
           <p className="text-gray-600 mt-4">
             Explore the impactful projects Green 4 Africa is leading to build a
             sustainable future.
@@ -63,12 +62,13 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 <p className="text-gray-600 mb-6">{project.description}</p>
-                <a
-                  href="/about"
+                {/* Use Link or anchor with valid href */}
+                <Link
+                  to={project.link}
                   className="text-green-600 font-medium hover:text-green-800 underline"
                 >
                   Learn More
-                </a>
+                </Link>
               </div>
             </div>
           ))}

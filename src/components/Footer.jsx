@@ -24,10 +24,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300">About Us</a></li>
-              <li><a href="#" className="hover:text-gray-300">Our Projects</a></li>
-              <li><a href="#" className="hover:text-gray-300">Volunteer</a></li>
-              <li><a href="#" className="hover:text-gray-300">Donate</a></li>
+              <li><a href="/about-us" className="hover:text-gray-300">About Us</a></li>
+              <li><a href="/our-projects" className="hover:text-gray-300">Our Projects</a></li>
+              <li><a href="/volunteer" className="hover:text-gray-300">Volunteer</a></li>
+              <li><a href="/donate" className="hover:text-gray-300">Donate</a></li>
             </ul>
           </div>
 
@@ -45,15 +45,15 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Follow Us</h3>
             <div className="space-x-4">
-              <a href="#" className="hover:text-gray-300">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
                 <FontAwesomeIcon icon={faFacebook} className="mr-2" />
                 Facebook
               </a>
-              <a href="#" className="hover:text-gray-300">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
                 <FontAwesomeIcon icon={faTwitter} className="mr-2" />
                 Twitter
               </a>
-              <a href="#" className="hover:text-gray-300">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
                 <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
                 LinkedIn
               </a>

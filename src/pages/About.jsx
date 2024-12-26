@@ -9,7 +9,7 @@ const About = () => {
         className="relative bg-cover bg-center min-h-[60vh] w-full flex items-center justify-center mt-10"
         style={{ backgroundImage: "url('/Banner.jpg')" }}
       >
-        <div className=" text-white p-10 rounded-md">
+        <div className="text-white p-10 rounded-md">
           <h1 className="text-4xl font-bold">About Green 4 Africa</h1>
           <p className="mt-2 text-lg">
             Creating a sustainable future for generations to come.
@@ -104,6 +104,7 @@ const About = () => {
           <a
             href="/contact"
             className="mt-6 inline-block bg-white text-green-700 font-semibold py-3 px-6 rounded-md shadow hover:bg-gray-100 transition"
+            aria-label="Contact Us"
           >
             Get in Touch
           </a>
