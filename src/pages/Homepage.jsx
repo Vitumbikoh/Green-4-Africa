@@ -1,6 +1,7 @@
 import React from 'react';
 import Products from '../components/Products';
 import Header from '../components/Header'; // Import the Header component
+import Info from '../components/info';
 
 const Home = () => {
   return (
@@ -9,8 +10,8 @@ const Home = () => {
 
       {/* Hero Section */}
       <div
-        className="bg-cover bg-center min-h-[90vh] relative"
-        style={{ backgroundImage: "url('/Homepage.JPG')" }}
+        className="bg-cover bg-center min-h-[94vh] relative"
+        style={{ backgroundImage: "url('/Bannner.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 container mx-auto px-4 flex items-center h-full">
@@ -36,22 +37,22 @@ const Home = () => {
 
       {/* Info Section */}
       <div className="bg-white py-10">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="text-center shadow-lg rounded-lg p-6 bg-gray-100">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-20">
+          <div className="text-center shadow-lg rounded-lg p-6 bg-gray-100 transform -translate-y-12">
             <div className="text-green-600 text-4xl mb-4">
               <i className="fas fa-clock"></i>
             </div>
             <h3 className="font-bold text-lg mb-2">Working Hours</h3>
             <p>Mon-Fri: 8:00 AM - 5:00 PM</p>
           </div>
-          <div className="text-center shadow-lg rounded-lg p-6 bg-gray-100">
+          <div className="text-center shadow-lg rounded-lg p-6 bg-gray-100 transform -translate-y-12">
             <div className="text-green-600 text-4xl mb-4">
               <i className="fas fa-map-marker-alt"></i>
             </div>
             <h3 className="font-bold text-lg mb-2">Our Location</h3>
             <p>Green Offices, Lilongwe, Malawi</p>
           </div>
-          <div className="text-center shadow-lg rounded-lg p-6 bg-gray-100">
+          <div className="text-center shadow-lg rounded-lg p-6 bg-gray-100 transform -translate-y-12">
             <div className="text-green-600 text-4xl mb-4">
               <i className="fas fa-phone-alt"></i>
             </div>
@@ -60,6 +61,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Info />
       <Products />
     </div>
   );

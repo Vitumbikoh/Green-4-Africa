@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import MobileMenu from "./MobileMenu";  // Import the MobileMenu component
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,27 +71,62 @@ const Header = () => {
         <nav className="hidden lg:flex items-center space-x-8">
           <ul className="flex space-x-12 items-center">
             <li>
-              <Link to="/" className="hover:underline text-white">
+              <Link
+                to="/"
+                className={`${
+                  location.pathname === "/"
+                    ? "text-gray-400 underline"
+                    : "text-white hover:text-gray-400 hover:underline"
+                }`}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:underline text-white">
+              <Link
+                to="/about"
+                className={`${
+                  location.pathname === "/about"
+                    ? "text-gray-400 underline"
+                    : "text-white hover:text-gray-400 hover:underline"
+                }`}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link to="/products" className="hover:underline text-white">
+              <Link
+                to="/products"
+                className={`${
+                  location.pathname === "/products"
+                    ? "text-gray-400 underline"
+                    : "text-white hover:text-gray-400 hover:underline"
+                }`}
+              >
                 Products
               </Link>
             </li>
             <li>
-              <Link to="/projects" className="hover:underline text-white">
+              <Link
+                to="/projects"
+                className={`${
+                  location.pathname === "/projects"
+                    ? "text-gray-400 underline"
+                    : "text-white hover:text-gray-400 hover:underline"
+                }`}
+              >
                 Projects
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:underline text-white">
+              <Link
+                to="/contact"
+                className={`${
+                  location.pathname === "/contact"
+                    ? "text-gray-400 underline"
+                    : "text-white hover:text-gray-400 hover:underline"
+                }`}
+              >
                 Contact
               </Link>
             </li>
@@ -107,46 +143,8 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Mobile Menu (visible only on mobile when open) */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-green-600 text-white p-6 space-y-4">
-          <ul>
-            <li>
-              <Link to="/" className="block hover:underline text-white">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="block hover:underline text-white">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" className="block hover:underline text-white">
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" className="block hover:underline text-white">
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="block hover:underline text-white">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/get-involved"
-                className="block bg-white text-green-600 px-4 py-2 rounded-md hover:bg-gray-200"
-              >
-                Get Involved
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+      {/* Mobile Menu */}
+      <MobileMenu isMobileMenuOpen={isMobileMenuOpen} location={location} />
     </header>
   );
 };

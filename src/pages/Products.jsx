@@ -8,7 +8,7 @@ const Products = () => {
         "Eco-friendly reusable bags made from sustainable materials to reduce plastic waste.",
       price: "$10",
       link: "/products/reusable-bags",
-      image: "/images/reusable-bags.jpg", // Replace with actual image path
+      image: "/Banner.jpg", // Image placed inside the public folder
     },
     {
       name: "Solar Lanterns",
@@ -16,7 +16,7 @@ const Products = () => {
         "Affordable solar-powered lanterns designed for off-grid communities.",
       price: "$25",
       link: "/products/solar-lanterns",
-      image: "/images/solar-lanterns.jpg", // Replace with actual image path
+      image: "/Banner.jpg", // Image placed inside the public folder
     },
     {
       name: "Organic Fertilizer",
@@ -24,7 +24,7 @@ const Products = () => {
         "Chemical-free fertilizer that promotes sustainable farming practices.",
       price: "$15",
       link: "/products/organic-fertilizer",
-      image: "/images/organic-fertilizer.jpg", // Replace with actual image path
+      image: "/Banner.jpg", // Image placed inside the public folder
     },
     {
       name: "Bamboo Straws",
@@ -32,12 +32,12 @@ const Products = () => {
         "Durable, reusable bamboo straws for eco-conscious individuals.",
       price: "$5",
       link: "/products/bamboo-straws",
-      image: "/images/bamboo-straws.jpg", // Replace with actual image path
+      image: "/Banner.jpg", // Image placed inside the public folder
     },
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 mt-10">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Title Section */}
         <div className="text-center mb-12">
@@ -68,7 +68,7 @@ const Products = () => {
                   {product.price}
                 </p>
                 <a
-                  href={product.link}
+                  href="/about"
                   className="text-green-600 font-medium hover:text-green-800 underline"
                 >
                   Learn More

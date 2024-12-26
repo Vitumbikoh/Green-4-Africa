@@ -1,12 +1,13 @@
 import React from "react";
+import Team from "../components/TeamMembers";
 
 const About = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 my-8 mt-20">
       {/* Hero Section */}
       <div
-        className="relative bg-cover bg-center min-h-[60vh] w-full flex items-center justify-center"
-        style={{ backgroundImage: "url('/Homepage.JPG')" }}
+        className="relative bg-cover bg-center min-h-[60vh] w-full flex items-center justify-center mt-10"
+        style={{ backgroundImage: "url('/Banner.jpg')" }}
       >
         <div className=" text-white p-10 rounded-md">
           <h1 className="text-4xl font-bold">About Green 4 Africa</h1>
@@ -90,30 +91,7 @@ const About = () => {
       </div>
 
       {/* Leadership Section */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
-          <h2 className="text-3xl font-bold text-center text-green-700">
-            Meet Our Team
-          </h2>
-          <p className="text-center text-gray-600 mt-4">
-            Our dedicated team of professionals works tirelessly to achieve our
-            mission.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 mt-10">
-            {/* Sample Team Member */}
-            <div className="text-center">
-              <img
-                className="w-32 h-32 rounded-full mx-auto"
-                src="https://via.placeholder.com/150"
-                alt="Team Member"
-              />
-              <h3 className="mt-4 text-lg font-bold">John Doe</h3>
-              <p className="text-gray-600">Executive Director</p>
-            </div>
-            {/* Add more team members as needed */}
-          </div>
-        </div>
-      </div>
+      <Team />
 
       {/* Call to Action */}
       <div className="bg-white text-grey-200 py-12">
