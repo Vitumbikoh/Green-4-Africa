@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Projects from './pages/Projects';
+import GetInvolved from './pages/GetInvolved';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/get-involved" element={<GetInvolved />} />
           </Routes>
         </main>
 
