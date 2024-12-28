@@ -9,7 +9,7 @@ const Contact = () => {
       {/* Hero Section */}
       <div
         className="relative bg-cover bg-center min-h-[60vh] w-full flex items-center justify-center"
-        style={{ backgroundImage: "url('/Homepage.JPG')" }}
+        style={{ backgroundImage: "url('/Banner.jpg')" }}
       >
         <div className="bg-black bg-opacity-50 text-white p-10 rounded-md text-center">
           <h1 className="text-4xl font-bold">Contact Us</h1>

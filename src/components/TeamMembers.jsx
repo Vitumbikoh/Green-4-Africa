@@ -2,11 +2,12 @@ import React from "react";
 
 const Team = () => {
   const teamMembers = [
-    { name: "John Doe", role: "Executive Director", image: "https://via.placeholder.com/150" },
-    { name: "Jane Smith", role: "Marketing Manager", image: "https://via.placeholder.com/150" },
-    { name: "Michael Johnson", role: "Lead Developer", image: "https://via.placeholder.com/150" },
-    { name: "Emily Davis", role: "UX/UI Designer", image: "https://via.placeholder.com/150" },
-    { name: "Mark Scott", role: "Business Analyst", image: "https://via.placeholder.com/150" },
+    { name: "Mathews Z. Kumwenda", role: "Executive Director", image: "matthews.jpg" },
+    { name: "Grace Kayuni", role: "Marketing Officer", image: "matthews.jpg" },
+    { name: "Sithandiveni Soko", role: "Head of Sanitation", image: "matthews.jpg" },
+    { name: "Asayile Ngosi", role: "Programmes Manager", image: "matthews.jpg" },
+    { name: "Dorica Nyirenda", role: "Head of Agriculture", image: "matthews.jpg" },
+    { name: "Walinase Singini", role: "Quality Control Officer", image: "matthews.jpg" },
   ];
 
   return (
@@ -19,16 +20,20 @@ const Team = () => {
           Our dedicated team of professionals works tirelessly to achieve our
           mission.
         </p>
-        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
           {teamMembers.map((member, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="relative group">
               <img
-                className="w-32 h-32 rounded-full mx-auto"
+                className="w-full h-64 object-cover rounded-lg shadow-lg transform transition-all duration-300 ease-in-out group-hover:scale-105"
                 src={member.image}
                 alt={member.name}
               />
-              <h3 className="mt-4 text-lg font-bold">{member.name}</h3>
-              <p className="text-gray-600">{member.role}</p>
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-end p-4 rounded-lg">
+                <div className="text-center text-white">
+                  <h3 className="text-lg font-bold">{member.name}</h3>
+                  <p className="text-sm">{member.role}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

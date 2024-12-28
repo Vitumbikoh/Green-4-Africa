@@ -1,56 +1,58 @@
-import React from 'react';
+import React from "react";
 
 const Products = () => {
-  const services = [
+  const mainProducts = [
     {
-      title: 'Organic Fertilizer',
+      title: "Eco-Plastic Bricks",
       description:
-        'Sustainable organic fertilizer that helps farmers achieve high yields and ensures environmental conservation.',
-      learnMoreLink: '/about',
+        "Production and sale of durable and eco-friendly plastic bricks.",
     },
     {
-      title: 'Youth Empowerment',
+      title: "Organic Fertilizer",
       description:
-        'Programs fostering resourceful, development-oriented youth for socioeconomic advancement and mindset change.',
-      learnMoreLink: '/about',
+        "Production and sale of sustainable organic fertilizer for high yields.",
     },
     {
-      title: 'Natural Resource Management',
+      title: "Waste Management",
       description:
-        'Encouraging sustainable resource utilization and conservation to prevent deforestation and manage floods.',
-      learnMoreLink: '/about',
+        "Collecting waste and recycling to reduce environmental impact.",
     },
   ];
 
   return (
-    <div className="bg-white py-20 px-8">
+    <div className="bg-white py-10 px-16 sm:px-8 md:px-10">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6 text-gray-800">Explore Services & Products</h2>
-        <p className="text-lg text-gray-600 mb-16">
-          Green 4 Africa offers innovative solutions to enhance environmental conservation, youth development, and sustainable agriculture.
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">
+          Our Products & Services
+        </h2>
+        <p className="text-base sm:text-lg text-gray-600 mb-16">
+          Green 4 Africa offers innovative products and services designed to
+          support environmental conservation and sustainable development.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {services.map((service, index) => (
+
+        {/* Main Products Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
+          {mainProducts.map((product, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105"
+              className="bg-white rounded-lg p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105"
             >
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center text-3xl font-bold text-white">
-                  {service.title[0]}
-                </div>
-              </div>
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">{service.title}</h3>
-              <p className="text-gray-500 mb-6">{service.description}</p>
-              <a
-                href={service.learnMoreLink || '#'}
-                className="text-green-500 hover:text-green-600 font-semibold"
-                aria-disabled={!service.learnMoreLink}
-              >
-                Learn More...
-              </a>
+              <h4 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
+                {product.title}
+              </h4>
+              <p className="text-gray-500 text-base sm:text-lg">{product.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* See All Link */}
+        <div className="mt-10">
+          <a
+            href="/products"
+            className="text-green-500 hover:text-green-600 text-lg font-semibold"
+          >
+            See All Products
+          </a>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ const About = () => {
       {/* Hero Section */}
       <div
         className="relative bg-cover bg-center min-h-[60vh] w-full flex items-center justify-center mt-10"
-        style={{ backgroundImage: "url('/Banner.jpg')" }}
+        style={{ backgroundImage: "url('/matthews.jpg')" }}
       >
         <div className="text-white p-10 rounded-md">
           <h1 className="text-4xl font-bold">About Green 4 Africa</h1>
@@ -23,10 +23,9 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-700">Who We Are</h2>
             <p className="mt-4 text-gray-600">
-              Green 4 Africa is an organization committed to improving
-              environmental pollution control, fostering sustainable
-              development, and empowering communities to lead eco-friendly
-              lives.
+              Green Africa was established in total compliance of the Laws of
+              Malawi in October in the year of our Lord 2021 by Mathews Zinyengo
+              Kumwenda as a Founder.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -39,13 +38,12 @@ const About = () => {
                 solutions that promote sustainability.
               </p>
             </div>
-            <div className="bg-green-50 p-6 rounded-md shadow-lg">
+            <div className="bg-green-50 p-6 px-6 rounded-md shadow-lg">
               <h3 className="text-xl font-semibold text-green-600">
                 Our Vision
               </h3>
               <p className="mt-4 text-gray-600">
-                A world where communities live in harmony with nature and
-                embrace sustainable practices in their daily lives.
+                Create a sustainable future for Africa.
               </p>
             </div>
             <div className="bg-green-50 p-6 rounded-md shadow-lg">
