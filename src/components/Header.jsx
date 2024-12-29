@@ -38,15 +38,15 @@ const Header = () => {
           : "bg-transparent text-white"
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center py-6 sm:px-6 lg:px-16">
+      <div className="container mx-auto px-4 flex justify-between items-center py-6 sm:px-6 lg:px-16 md:py-8">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
             src="/logo.png" // Replace with your Green 4 Africa logo path
             alt="Green 4 Africa"
-            className="h-10 mr-2"
+            className="h-10 mr-2 md:h-14" // Increased size for tablet mode
           />
-          <span className="text-2xl font-bold text-white">Green 4 Africa</span>
+          <span className="text-2xl font-bold text-white md:text-3xl">Green 4 Africa</span>
         </Link>
 
         {/* Mobile Menu Toggle (visible only on mobile) */}
@@ -56,7 +56,7 @@ const Header = () => {
             className="text-white focus:outline-none"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 md:w-8 md:h-8" // Increased size for tablet mode
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -123,7 +123,7 @@ const Header = () => {
                 Projects
               </Link>
             </li>
-           
+
             {/* CTA Button */}
             <li>
               <Link
