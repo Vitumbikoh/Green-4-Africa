@@ -40,7 +40,7 @@ const Header = () => {
     >
       <div
         className={`container mx-auto px-4 flex justify-between items-center 
-          py-4 sm:py-6 md:py-10 lg:py-6 xl:py-4`}
+          py-4 sm:py-6 md:py-16 lg:py-6 xl:py-4`}
       >
         {/* Logo */}
         <Link to="/" className="flex items-center">

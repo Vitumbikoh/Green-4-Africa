@@ -14,7 +14,7 @@ const Home = () => {
     <div className="relative">
       <Header /> {/* Add the Header component here */}
       <div
-        className="bg-cover bg-center min-h-[80vh] md:min-h-[75vh] lg:min-h-[94vh] sm:min-h-[60vh] relative"
+        className="bg-cover bg-center min-h-[80vh] md:min-h-[60vh] lg:min-h-[94vh] sm:min-h-[60vh] relative"
         style={{ backgroundImage: "url('/Bannner.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
