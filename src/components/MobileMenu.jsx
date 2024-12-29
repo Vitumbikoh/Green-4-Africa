@@ -11,7 +11,7 @@ const MobileMenu = ({ isMobileMenuOpen, location, toggleMobileMenu }) => {
     <div
       className={`lg:hidden ${
         isMobileMenuOpen ? "block" : "hidden"
-      } bg-green-600 text-white p-6 space-y-8 md:p-8 md:space-y-10`}
+      } bg-green-600 text-white p-6 space-y-8 md:p-8 md:space-y-16`}
     >
       <ul>
         <li>
