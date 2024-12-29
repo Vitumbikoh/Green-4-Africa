@@ -81,7 +81,7 @@ const Header = () => {
                 className={`${
                   location.pathname === "/"
                     ? "text-gray-400 underline"
-                    : "text-white hover:text-gray-400 hover:underline"
+                    : "text-white hover:text-gray-400 "
                 }`}
               >
                 Home
@@ -93,7 +93,7 @@ const Header = () => {
                 className={`${
                   location.pathname === "/about"
                     ? "text-gray-400 underline"
-                    : "text-white hover:text-gray-400 hover:underline"
+                    : "text-white hover:text-gray-400 "
                 }`}
               >
                 About
@@ -105,7 +105,7 @@ const Header = () => {
                 className={`${
                   location.pathname === "/products"
                     ? "text-gray-400 underline"
-                    : "text-white hover:text-gray-400 hover:underline"
+                    : "text-white hover:text-gray-400 "
                 }`}
               >
                 Products
@@ -117,31 +117,20 @@ const Header = () => {
                 className={`${
                   location.pathname === "/projects"
                     ? "text-gray-400 underline"
-                    : "text-white hover:text-gray-400 hover:underline"
+                    : "text-white hover:text-gray-400 "
                 }`}
               >
                 Projects
               </Link>
             </li>
-            <li>
-              <Link
-                to="/contact"
-                className={`${
-                  location.pathname === "/contact"
-                    ? "text-gray-400 underline"
-                    : "text-white hover:text-gray-400 hover:underline"
-                }`}
-              >
-                Contact
-              </Link>
-            </li>
+           
             {/* CTA Button */}
             <li>
               <Link
-                to="/get-involved"
+                to="/contact"
                 className="bg-white text-green-600 px-4 py-2 rounded-md hover:bg-gray-200"
               >
-                Get Involved
+                Contact Us
               </Link>
             </li>
           </ul>

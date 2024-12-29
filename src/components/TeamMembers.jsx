@@ -3,11 +3,11 @@ import React from "react";
 const Team = () => {
   const teamMembers = [
     { name: "Mathews Z. Kumwenda", role: "Executive Director", image: "matthews.jpg" },
-    { name: "Grace Kayuni", role: "Marketing Officer", image: "matthews.jpg" },
-    { name: "Sithandiveni Soko", role: "Head of Sanitation", image: "matthews.jpg" },
-    { name: "Asayile Ngosi", role: "Programmes Manager", image: "matthews.jpg" },
-    { name: "Dorica Nyirenda", role: "Head of Agriculture", image: "matthews.jpg" },
-    { name: "Walinase Singini", role: "Quality Control Officer", image: "matthews.jpg" },
+    { name: "Grace Kayuni", role: "Marketing Officer", image: "GraceKayuni.jpg" },
+    { name: "Sithandiveni Soko", role: "Head of Sanitation", image: "SithandiveniSoko.jpg" },
+    { name: "Asayile Ngosi", role: "Programmes Manager", image: "AsayileNgosi.jpg" },
+    { name: "Dorica Kawonga", role: "Head of Agriculture", image: "DoricaKawonga.jpg" },
+    { name: "Walinase Singini", role: "Quality Control Officer", image: "SmileHamilton.jpg" },
   ];
 
   return (
@@ -20,7 +20,7 @@ const Team = () => {
           Our dedicated team of professionals works tirelessly to achieve our
           mission.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
           {teamMembers.map((member, index) => (
             <div key={index} className="relative group">
               <img
@@ -28,7 +28,7 @@ const Team = () => {
                 src={member.image}
                 alt={member.name}
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-end p-4 rounded-lg">
+              <div className="absolute inset-0 bg-green-900 bg-opacity-30 flex justify-center items-end p-4 rounded-lg">
                 <div className="text-center text-white">
                   <h3 className="text-lg font-bold">{member.name}</h3>
                   <p className="text-sm">{member.role}</p>

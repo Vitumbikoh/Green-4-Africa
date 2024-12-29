@@ -17,13 +17,7 @@ const Projects = () => {
       link: "/projects/recycling-program",
       image: "/Banner.jpg", // Use the image from the public folder
     },
-    {
-      title: "Clean Water for All",
-      description:
-        "Providing access to clean and safe water in underprivileged areas through borehole drilling and water purification projects.",
-      link: "/projects/clean-water",
-      image: "/Banner.jpg", // Use the image from the public folder
-    },
+    
     {
       title: "Green Energy Adoption",
       description:

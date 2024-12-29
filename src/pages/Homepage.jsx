@@ -2,16 +2,19 @@ import React from "react";
 import Products from "../components/Products";
 import Header from "../components/Header";
 import Info from "../components/info";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faClock,
+  faMapMarkerAlt,
+  faPhoneAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   return (
     <div className="relative">
       <Header /> {/* Add the Header component here */}
-      {/* Hero Section */}
       <div
-        className="bg-cover bg-center min-h-[80vh] md:min-h-[94vh] sm:min-h-[60vh] relative"
+        className="bg-cover bg-center min-h-[80vh] md:min-h-[75vh] sm:min-h-[60vh] relative"
         style={{ backgroundImage: "url('/Bannner.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -21,7 +24,9 @@ const Home = () => {
               Welcome to Green 4 Africa
             </h1>
             <p className="text-lg mb-6">
-              Green 4 Africa was founded on 07th November 2021 by Mathews Zinyengo Kumwenda with a vision to create a sustainable future for Africa.
+              Green 4 Africa was founded on 07th November 2021 by Mathews
+              Zinyengo Kumwenda with a vision to create a sustainable future for
+              Africa.
             </p>
             <div className="flex space-x-4">
               <button className="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700">
