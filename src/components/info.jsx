@@ -5,31 +5,31 @@ const Info = () => {
     <div className="bg-white py-16 sm:px-8 md:px-16 px-16">
       <div className="max-w-7xl mx-auto flex flex-wrap lg:flex-nowrap items-start gap-12">
         {/* Images Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full lg:w-1/2">
-          {/* Top Row */}
-          <div className="relative">
-            <img
-              src="Banner.jpg"
-              alt="Organic Fertilizer Production"
-              className="rounded-xl shadow-lg object-cover w-full h-72 sm:h-64 md:h-72 lg:h-80 transition-transform duration-500 ease-in-out transform hover:scale-105 animate-fadeIn"
-            />
-          </div>
-          <div className="relative">
-            <img
-              src="matthews.jpg"
-              alt="Farming with Organic Fertilizer"
-              className="rounded-xl shadow-lg object-cover w-full h-72 sm:h-64 md:h-72 lg:h-80 transition-transform duration-500 ease-in-out transform hover:scale-105 animate-fadeIn"
-            />
-          </div>
-          {/* Bottom Row */}
-          <div className="col-span-2 relative">
-            <img
-              src="Bannner.jpg"
-              alt="Green 4 Africa Facility"
-              className="rounded-xl shadow-lg object-cover w-full h-72 transition-transform duration-500 ease-in-out transform hover:scale-105 animate-fadeIn"
-            />
-          </div>
-        </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full lg:w-1/2">
+  {/* Top Row */}
+  <div className="relative">
+    <img
+      src="Banner.jpg"
+      alt="Organic Fertilizer Production"
+      className="rounded-xl shadow-lg object-cover w-full h-48 sm:h-64 md:h-72 lg:h-80 transition-transform duration-500 ease-in-out transform hover:scale-105 animate-fadeIn"
+    />
+  </div>
+  <div className="relative">
+    <img
+      src="matthews.jpg"
+      alt="Farming with Organic Fertilizer"
+      className="rounded-xl shadow-lg object-cover w-full h-48 sm:h-64 md:h-72 lg:h-80 transition-transform duration-500 ease-in-out transform hover:scale-105 animate-fadeIn"
+    />
+  </div>
+  {/* Bottom Row */}
+  <div className="col-span-2 relative">
+    <img
+      src="Bannner.jpg"
+      alt="Green 4 Africa Facility"
+      className="rounded-xl shadow-lg object-cover w-full h-48 sm:h-64 md:h-72 lg:h-80 transition-transform duration-500 ease-in-out transform hover:scale-105 animate-fadeIn"
+    />
+  </div>
+</div>
 
         {/* Text Content Section */}
         <div className="w-full lg:w-1/2 flex flex-col justify-between mt-4">

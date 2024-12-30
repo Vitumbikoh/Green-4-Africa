@@ -11,7 +11,7 @@ const MobileMenu = ({ isMobileMenuOpen, location, toggleMobileMenu }) => {
     <div
       className={`lg:hidden ${
         isMobileMenuOpen ? "block" : "hidden"
-      } bg-green-600 text-white p-6 space-y-8 md:p-8 md:space-y-16`}
+      } bg-green-600 text-white p-6 space-y-24 md:p-8 md:space-y-16`}
     >
       <ul>
         <li>
@@ -66,24 +66,12 @@ const MobileMenu = ({ isMobileMenuOpen, location, toggleMobileMenu }) => {
             Projects
           </Link>
         </li>
+        
         <li>
           <Link
             to="/contact"
             onClick={handleLinkClick}
-            className={`block ${
-              location.pathname === "/contact"
-                ? "text-gray-400 underline"
-                : "text-white hover:text-gray-400 "
-            }`}
-          >
-            Contact
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/contact"
-            onClick={handleLinkClick}
-            className="block bg-white text-green-600 px-4 py-2 rounded-md hover:bg-gray-200"
+            className="block bg-white text-green-600 px-4 py-2 mt-2 rounded-md hover:bg-gray-200"
           >
             Contact Us
           </Link>

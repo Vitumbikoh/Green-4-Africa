@@ -2,6 +2,7 @@ import React from "react";
 import Products from "../components/Products";
 import Header from "../components/Header";
 import Info from "../components/info";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faClock,
@@ -29,12 +30,18 @@ const Home = () => {
               Africa.
             </p>
             <div className="flex space-x-4">
-              <button className="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700">
+              <Link
+                to="/about"
+                className="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700"
+              >
                 Learn More
-              </button>
-              <button className="bg-transparent border border-white px-6 py-3 rounded-md hover:bg-white hover:text-green-600">
+              </Link>
+              <Link
+                to="/contact"
+                className="bg-transparent border border-white px-6 py-3 rounded-md hover:bg-white hover:text-green-600"
+              >
                 Join Us
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -49,7 +56,7 @@ const Home = () => {
             <h3 className="font-bold text-lg mb-2">Working Hours</h3>
             <p>Mon-Sat: 8:00 AM - 5:00 PM</p>
           </div>
-          <div className="text-center shadow-lg rounded-lg p-6 bg-gray-100 transform -translate-y-12">
+          <div className="text-center shadow-lg rounded-lg p-6 bg-gray-100 transform -translate-y-12 mb-6 md:mb-0">
             <div className="text-green-600 text-2xl mb-4">
               <FontAwesomeIcon icon={faMapMarkerAlt} />
             </div>

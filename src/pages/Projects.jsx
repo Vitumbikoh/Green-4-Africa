@@ -17,7 +17,6 @@ const Projects = () => {
       link: "/projects/recycling-program",
       image: "/Banner.jpg", // Use the image from the public folder
     },
-    
     {
       title: "Green Energy Adoption",
       description:
@@ -32,15 +31,17 @@ const Projects = () => {
       <div className="container mx-auto px-6 lg:px-8">
         {/* Title Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-green-700 mt-4">Our Projects</h2>
-          <p className="text-gray-600 mt-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-green-700 mt-4">
+            Our Projects
+          </h2>
+          <p className="text-gray-600 mt-4 text-sm sm:text-base md:text-lg">
             Explore the impactful projects Green 4 Africa is leading to build a
             sustainable future.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
           {projectsData.map((project, index) => (
             <div
               key={index}
@@ -52,14 +53,15 @@ const Projects = () => {
                 className="h-48 w-full object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-green-700 mb-4">
+                <h3 className="text-lg sm:text-xl font-bold text-green-700 mb-4">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-6">{project.description}</p>
-                {/* Use Link or anchor with valid href */}
+                <p className="text-gray-600 text-sm sm:text-base mb-6">
+                  {project.description}
+                </p>
                 <Link
                   to={project.link}
-                  className="text-green-600 font-medium hover:text-green-800 underline"
+                  className="text-green-600 font-medium hover:text-green-800 underline text-sm sm:text-base"
                 >
                   Learn More
                 </Link>
