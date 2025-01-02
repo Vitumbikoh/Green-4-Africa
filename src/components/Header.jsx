@@ -34,111 +34,68 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
         isScrolled || !isHomePage
-          ? "bg-green-600 text-white shadow-lg"
+          ? "bg-g4AGreen text-white shadow-md"
           : "bg-transparent text-white"
       }`}
     >
-      <div
-        className={`container mx-auto px-4 flex justify-between items-center 
-          py-4 sm:py-6 md:py-16 lg:py-6 xl:py-4`}
-      >
+      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center space-x-3">
           <img
             src="/logo.png" // Replace with your Green 4 Africa logo path
             alt="Green 4 Africa"
-            className="h-8 sm:h-10 md:h-12 lg:h-8 xl:h-8 mr-2"
+            className="h-10"
           />
-          <span className="text-xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-2xl font-bold text-white">
-            Green 4 Africa
-          </span>
+          <span className="text-2xl font-serif font-bold text-white">Green 4 Africa</span>
         </Link>
 
-        {/* Mobile Menu Toggle (visible only on mobile) */}
-        <div className="lg:hidden">
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white focus:outline-none"
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="lg:hidden text-gray-800 focus:outline-none"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center space-x-10 txet-white">
+          {[
+            { path: "/", label: "Home" },
+            { path: "/about", label: "About" },
+            { path: "/products", label: "Products" },
+            { path: "/projects", label: "Projects" },
+          ].map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`transition duration-300 ${
+                location.pathname === item.path
+                  ? "text-gray-900 border-b-2 border-gray-800"
+                  : "text-white hover:text-gray-800"
+              }`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
-
-        {/* Desktop Navigation (hidden on mobile) */}
-        <nav className="hidden lg:flex items-center space-x-8">
-          <ul className="flex space-x-12 items-center">
-            <li>
-              <Link
-                to="/"
-                className={`${
-                  location.pathname === "/"
-                    ? "text-gray-400 underline"
-                    : "text-white hover:text-gray-400 "
-                }`}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className={`${
-                  location.pathname === "/about"
-                    ? "text-gray-400 underline"
-                    : "text-white hover:text-gray-400 "
-                }`}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/products"
-                className={`${
-                  location.pathname === "/products"
-                    ? "text-gray-400 underline"
-                    : "text-white hover:text-gray-400 "
-                }`}
-              >
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/projects"
-                className={`${
-                  location.pathname === "/projects"
-                    ? "text-gray-400 underline"
-                    : "text-white hover:text-gray-400 "
-                }`}
-              >
-                Projects
-              </Link>
-            </li>
-
-            {/* CTA Button */}
-            <li>
-              <Link
-                to="/contact"
-                className="bg-white text-green-600 px-4 py-2 rounded-md hover:bg-gray-200"
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ul>
+              {item.label}
+            </Link>
+          ))}
+          <Link
+            to="/contact"
+            className="px-5 py-2 bg-white text-g4AGreen rounded-md hover:bg-green-700 hover:text-white transition duration-300"
+          >
+            Contact Us
+          </Link>
         </nav>
       </div>
 

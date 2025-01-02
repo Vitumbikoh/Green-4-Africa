@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "animate.css";
 
 const Products = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,7 +6,7 @@ const Products = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 500); // Delay the animation for 500ms after the component loads
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -15,23 +14,26 @@ const Products = () => {
     {
       name: "Eco-Plastic Bricks",
       description:
-        "Production and sale of durable and eco-friendly plastic bricks for sustainable construction.",
+        "Durable, eco-friendly plastic bricks for sustainable construction.",
+      price: "$50",
       link: "/products/eco-plastic-bricks",
-      image: "/Banner.jpg", // Image placed inside the public folder
+      image: "/Banner.jpg",
     },
     {
       name: "Organic Fertilizer",
       description:
-        "Production and sale of sustainable organic fertilizer to promote high crop yields and environmental conservation.",
+        "Sustainable organic fertilizer to promote high crop yields.",
+      price: "$30",
       link: "/products/organic-fertilizer",
-      image: "/Banner.jpg", // Image placed inside the public folder
+      image: "/Banner.jpg",
     },
     {
       name: "Fire Briquettes",
       description:
-        "Production and sale of eco-friendly fire briquettes as an alternative energy source.",
+        "Eco-friendly fire briquettes as an alternative energy source.",
+      price: "$20",
       link: "/products/fire-briquettes",
-      image: "/Banner.jpg", // Image placed inside the public folder
+      image: "/Banner.jpg",
     },
   ];
 
@@ -39,101 +41,121 @@ const Products = () => {
     {
       name: "Waste Collection & Recycling",
       description:
-        "Collecting waste and recycling materials to reduce environmental impact and promote a circular economy.",
+        "Reducing environmental impact through waste collection and recycling.",
+      price: "$100",
       link: "/services/waste-collection",
-      image: "/Banner.jpg", // Image placed inside the public folder
+      image: "/Banner.jpg",
     },
     {
       name: "Environmental Protection Training",
       description:
-        "Training the community to protect the environment through awareness and practical steps.",
+        "Training communities in awareness and practical steps for sustainability.",
+      price: "$75",
       link: "/services/environmental-protection",
-      image: "/Banner.jpg", // Image placed inside the public folder
+      image: "/Banner.jpg",
     },
     {
       name: "Sustainable Agriculture Training",
       description:
-        "Training farmers in sustainable agriculture practices to boost productivity while preserving natural resources.",
+        "Teaching sustainable practices to enhance productivity and conservation.",
+      price: "$50",
       link: "/services/sustainable-agriculture",
-      image: "/Banner.jpg", // Image placed inside the public folder
+      image: "/Banner.jpg",
     },
   ];
 
   return (
-    <section>
-      <div className="py-16 bg-gray-50 mt-6">
-        {/* Banner with Animated Text */}
-        <div
-          className={`relative h-64 bg-cover bg-center rounded-lg mb-12 transition-all duration-1000 ease-in-out ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`}
-          style={{ backgroundImage: "url('/Banner.jpg')" }}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-            <h2 className="text-4xl font-bold text-white animate__animated animate__fadeIn">
-              Our Products & Services
-            </h2>
+    <section className="bg-gray-100 py-12">
+      <div
+        className={`relative h-64 bg-cover bg-center rounded-lg shadow-md mb-10 transition-all duration-700 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+        style={{ backgroundImage: "url('/Banner.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h2 className="text-4xl font-bold text-white">Our Offerings</h2>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="text-center mb-8">
+          <h3 className="text-2xl font-semibold text-gray-800">
+            Eco-Friendly Solutions
+          </h3>
+          <p className="text-gray-600 mt-2">
+            Discover our innovative products and services promoting
+            sustainability.
+          </p>
+        </div>
+
+        <div className="mb-16">
+          <h3 className="text-xl font-semibold text-gray-700 mb-6">Products</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {mainProducts.map((product, index) => (
+              <div
+                key={index}
+                className="bg-white shadow rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+              >
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-lg font-bold text-gray-800">
+                    {product.name}
+                  </h4>
+                  <p className="text-gray-600 text-sm mt-2">
+                    {product.description}
+                  </p>
+                  <div className="text-green-600 font-semibold mt-4">
+                    {product.price}
+                  </div>
+                  <a
+                    href={product.link}
+                    className="inline-block mt-4 text-sm text-blue-600 hover:underline"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="container mx-auto px-6 lg:px-8">
-          {/* Title Section */}
-          <div className="text-center mb-12">
-            <p className="text-gray-600 mt-4">
-              Explore our eco-friendly products and services designed to foster environmental sustainability and community development.
-            </p>
-          </div>
-
-          {/* Main Products Grid */}
-          <div className="text-center mb-16">
-            <h3 className="text-3xl font-semibold text-green-700 mb-6">Products</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {mainProducts.map((product, index) => (
-                <div
-                  key={index}
-                  className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300"
-                >
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="h-48 w-full object-cover transform hover:scale-110 transition duration-300"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-green-700 mb-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-gray-600 mb-4">{product.description}</p>
+        <div>
+          <h3 className="text-xl font-semibold text-gray-700 mb-6">Services</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {mainServices.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white shadow rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+              >
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h4 className="text-lg font-bold text-gray-800">
+                    {service.name}
+                  </h4>
+                  <p className="text-gray-600 text-sm mt-2">
+                    {service.description}
+                  </p>
+                  <div className="text-green-600 font-semibold mt-4">
+                    {service.price}
                   </div>
+                  <a
+                    href={service.link}
+                    className="inline-block mt-4 text-sm text-blue-600 hover:underline"
+                  >
+                    Learn More
+                  </a>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
-          {/* Main Services Grid */}
-          <div className="text-center mb-16">
-            <h3 className="text-3xl font-semibold text-green-700 mb-6">Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {mainServices.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300"
-                >
-                  <img
-                    src={service.image}
-                    alt={service.name}
-                    className="h-48 w-full object-cover transform hover:scale-110 transition duration-300"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-green-700 mb-2">
-                      {service.name}
-                    </h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

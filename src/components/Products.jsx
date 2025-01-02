@@ -20,36 +20,39 @@ const Products = () => {
   ];
 
   return (
-    <div className="bg-white py-10 px-16 sm:px-8 md:px-10">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">
+    <div className="bg-gray-50 py-20 px-8 sm:px-12 md:px-16">
+      <div className="max-w-7xl mx-auto text-center">
+        {/* Section Header */}
+        <h2 className="text-4xl font-serif font-bold text-gray-800 mb-6">
           Our Products & Services
         </h2>
-        <p className="text-base sm:text-lg text-gray-600 mb-16">
+        <p className="text-lg text-gray-700 leading-relaxed mb-12">
           Green 4 Africa offers innovative products and services designed to
           support environmental conservation and sustainable development.
         </p>
 
-        {/* Main Products Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10">
+        {/* Product Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {mainProducts.map((product, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105"
+              className="bg-white rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105 p-8"
             >
-              <h4 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
+              <h4 className="text-2xl font-serif font-semibold text-gray-800 mb-4">
                 {product.title}
               </h4>
-              <p className="text-gray-500 text-base sm:text-lg">{product.description}</p>
+              <p className="text-gray-600 text-base leading-relaxed">
+                {product.description}
+              </p>
             </div>
           ))}
         </div>
 
         {/* See All Link */}
-        <div className="mt-10">
+        <div className="mt-12">
           <a
             href="/products"
-            className="text-green-500 hover:text-green-600 text-lg font-semibold"
+            className="text-green-600 hover:text-green-700 text-lg font-medium underline transition-colors"
           >
             See All Products
           </a>

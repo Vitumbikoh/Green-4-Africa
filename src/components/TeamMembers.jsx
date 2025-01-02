@@ -11,35 +11,37 @@ const Team = () => {
   ];
 
   return (
-    <div className="py-16 bg-white">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
-        <h2 className="text-3xl font-bold text-center text-green-700">
-          Meet Our Team
-        </h2>
-        <p className="text-center text-gray-600 mt-4">
-          Our dedicated team of professionals works tirelessly to achieve our
-          mission.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
+        <header className="text-center mb-12">
+          <h2 className="text-4xl font-serif text-gray-800 font-bold">Our Team</h2>
+          <p className="mt-4 text-lg text-gray-600">
+            Meet the professionals driving our mission forward with passion and expertise.
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="relative group">
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
+            >
               <img
-                className="w-full h-64 object-cover rounded-lg shadow-lg transform transition-all duration-300 ease-in-out group-hover:scale-105"
+                className="w-full h-72 object-cover"
                 src={member.image}
                 alt={member.name}
               />
-              <div className="absolute inset-0 bg-green-900 bg-opacity-30 flex justify-center items-end p-4 rounded-lg">
-                <div className="text-center text-white">
-                  <h3 className="text-lg font-bold">{member.name}</h3>
-                  <p className="text-sm">{member.role}</p>
-                </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
+                <p className="text-gray-600">{member.role}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default Team;
+  

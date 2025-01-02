@@ -1,51 +1,65 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link for routing (if using React Router)
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projectsData = [
     {
-      title: "Tree Planting Initiative",
+      title: "Sustainable Agriculture Initiative",
       description:
-        "A campaign to plant 10,000 trees across various regions to combat deforestation and promote biodiversity.",
-      link: "/projects/tree-planting",
-      image: "/Banner.jpg", // Use the image from the public folder
+        "Implement climate-resilient agricultural practices, promote organic farming, and provide training to smallholder farmers to improve crop yields and income.",
+      link: "/projects/sustainable-agriculture",
+      image: "/Banner.jpg",
     },
     {
-      title: "Community Recycling Program",
+      title: "Waste Management and Recycling",
       description:
-        "Empowering communities to manage waste effectively through recycling workshops and initiatives.",
-      link: "/projects/recycling-program",
-      image: "/Banner.jpg", // Use the image from the public folder
+        "Develop and implement effective waste management systems, promoting recycling, organic fertilizer production, eco-plastic bricks production, fire briquettes making, and proper disposal of hazardous waste.",
+      link: "/projects/waste-management",
+      image: "/Banner.jpg",
     },
     {
-      title: "Green Energy Adoption",
+      title: "Eco-Friendly Solutions",
       description:
-        "Promoting the use of solar energy and other renewable sources to reduce reliance on fossil fuels.",
-      link: "/projects/green-energy",
-      image: "/Banner.jpg", // Use the image from the public folder
+        "Promote the use of renewable energy sources, such as solar, wind, and biogas, to reduce dependence on fossil fuels and mitigate climate change.",
+      link: "/projects/eco-friendly-solutions",
+      image: "/Banner.jpg",
+    },
+    {
+      title: "Climate Change Adaptation and Resilience",
+      description:
+        "Support communities to develop and implement climate change adaptation plans, promoting resilience and reducing vulnerability to climate-related disasters.",
+      link: "/projects/climate-adaptation",
+      image: "/Banner.jpg",
+    },
+    {
+      title: "Environmental Education and Awareness",
+      description:
+        "Develop and implement environmental education programs, promoting awareness and inspiring action on environmental conservation and sustainability.",
+      link: "/projects/environmental-education",
+      image: "/Banner.jpg",
     },
   ];
 
   return (
-    <section className="py-16 bg-gray-100 mt-10">
+    <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Title Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-green-700 mt-4">
+          <h2 className="text-4xl font-serif font-bold text-gray-800 mb-4">
             Our Projects
           </h2>
-          <p className="text-gray-600 mt-4 text-sm sm:text-base md:text-lg">
-            Explore the impactful projects Green 4 Africa is leading to build a
+          <p className="text-lg text-gray-600">
+            Discover impactful projects led by Green 4 Africa to promote a
             sustainable future.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {projectsData.map((project, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300"
+              className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300"
             >
               <img
                 src={project.image}
@@ -53,15 +67,15 @@ const Projects = () => {
                 className="h-48 w-full object-cover"
               />
               <div className="p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-green-700 mb-4">
+                <h3 className="text-xl font-serif font-semibold text-gray-800 mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base mb-6">
+                <p className="text-gray-600 text-base mb-5">
                   {project.description}
                 </p>
                 <Link
                   to={project.link}
-                  className="text-green-600 font-medium hover:text-green-800 underline text-sm sm:text-base"
+                  className="inline-block bg-green-700 text-white text-sm font-medium py-2 px-4 rounded hover:bg-green-800 transition"
                 >
                   Learn More
                 </Link>

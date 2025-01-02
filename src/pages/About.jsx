@@ -23,10 +23,10 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 my-8 mt-20">
+    <div className="bg-gray-100 my-8 pt-8">
       {/* Hero Section */}
       <div
-        className={`relative h-64 bg-cover bg-center rounded-lg mb-12 transition-all duration-1000 ease-in-out ${
+        className={`relative h-72 bg-cover bg-center rounded-lg mb-12 transition-all duration-1000 ease-in-out ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{ backgroundImage: "url('/matthews.jpg')" }}
