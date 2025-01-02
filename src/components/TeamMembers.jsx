@@ -3,6 +3,7 @@ import React from "react";
 const Team = () => {
   const teamMembers = [
     { name: "Mathews Z. Kumwenda", role: "Executive Director", image: "matthews.jpg" },
+    { name: "Blessings Kayuni", role: "Heard of finance", image: ".jpg" },
     { name: "Grace Kayuni", role: "Marketing Officer", image: "GraceKayuni.jpg" },
     { name: "Sithandiveni Soko", role: "Head of Sanitation", image: "SithandiveniSoko.jpg" },
     { name: "Asayile Ngosi", role: "Programmes Manager", image: "AsayileNgosi.jpg" },
@@ -24,7 +25,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
+              className="bg-white rounded-lg shadow-sm overflow-hidden transition-transform transform hover:scale-105"
             >
               <img
                 className="w-full h-72 object-cover"
@@ -44,4 +45,3 @@ const Team = () => {
 };
 
 export default Team;
-  

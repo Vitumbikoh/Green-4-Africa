@@ -20,7 +20,7 @@ const Projects = () => {
     {
       title: "Eco-Friendly Solutions",
       description:
-        "Promote the use of renewable energy sources, such as solar, wind, and biogas, to reduce dependence on fossil fuels and mitigate climate change.",
+        "Promote the use of renewable energy sources, such as Organic  fertilizer, solar, fire briquettes, eco-plastic  bricks and biogas, to reduce dependence on fossil fuels and mitigate climate change.",
       link: "/projects/eco-friendly-solutions",
       image: "/Banner.jpg",
     },

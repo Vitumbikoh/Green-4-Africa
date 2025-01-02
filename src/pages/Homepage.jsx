@@ -47,7 +47,7 @@ const Home = () => {
         </div>
       </div>
       {/* Info Section */}
-      <div className="bg-white py-6">
+      <div className="bg-white py-2">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-20">
           <div className="text-center shadow-lg rounded-lg p-6 bg-gray-100 transform -translate-y-16">
             <div className="text-green-600 text-2xl mb-4">

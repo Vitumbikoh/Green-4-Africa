@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 pr-2 sm:pr-4 md:pr-8 lg:pr-12 ${
         isScrolled || !isHomePage
           ? "bg-g4AGreen text-white shadow-md"
           : "bg-transparent text-white"
@@ -71,7 +71,7 @@ const Header = () => {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-10 txet-white">
+        <nav className="hidden lg:flex items-center space-x-12 txet-white">
           {[
             { path: "/", label: "Home" },
             { path: "/about", label: "About" },

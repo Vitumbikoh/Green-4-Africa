@@ -20,7 +20,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-20 px-8 sm:px-12 md:px-16">
+    <div className="bg-gray-50 pb-10 px-8 sm:px-12 md:px-16">
       <div className="max-w-7xl mx-auto text-center">
         {/* Section Header */}
         <h2 className="text-4xl font-serif font-bold text-gray-800 mb-6">
