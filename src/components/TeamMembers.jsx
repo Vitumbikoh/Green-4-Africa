@@ -3,12 +3,12 @@ import React from "react";
 const Team = () => {
   const teamMembers = [
     { name: "Mathews Z. Kumwenda", role: "Executive Director", image: "matthews.jpg" },
-    { name: "Blessings Kayuni", role: "Heard of finance", image: ".jpg" },
-    { name: "Grace Kayuni", role: "Marketing Officer", image: "GraceKayuni.jpg" },
+    { name: "Grace Kayuni", role: "Heard of finance", image: "GraceKayuni.jpg" },
+    // { name: "Grace Kayuni", role: "Marketing Officer", image: "GraceKayuni.jpg" },
     { name: "Sithandiveni Soko", role: "Head of Sanitation", image: "SithandiveniSoko.jpg" },
     { name: "Asayile Ngosi", role: "Programmes Manager", image: "AsayileNgosi.jpg" },
     { name: "Dorica Kawonga", role: "Head of Agriculture", image: "DoricaKawonga.jpg" },
-    { name: "Walinase Singini", role: "Quality Control Officer", image: "SmileHamilton.jpg" },
+    { name: "Smile Hamilton", role: " Head of Communication", image: "SmileHamilton.jpg" },
   ];
 
   return (

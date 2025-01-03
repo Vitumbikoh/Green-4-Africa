@@ -38,21 +38,21 @@ const Header = () => {
           : "bg-transparent text-white"
       }`}
     >
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-6 py-4 md:py-8 lg:py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
           <img
             src="/logo.png" // Replace with your Green 4 Africa logo path
             alt="Green 4 Africa"
-            className="h-10"
+            className="h-6 md:h-8 lg:h-10"
           />
-          <span className="text-2xl font-serif font-bold text-white">Green 4 Africa</span>
+          <span className="text-base sm:text-md md:text-lg lg:text-2xl font-serif font-bold text-white">Green 4 Africa</span>
         </Link>
 
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden text-gray-800 focus:outline-none"
+          className="lg:hidden text-white focus:outline-none"
         >
           <svg
             className="w-6 h-6"

@@ -4,13 +4,12 @@ const Info = () => {
   return (
     <div className="bg-gray-50 py-20 sm:px-8 md:px-16 px-6">
       <div className="max-w-7xl mx-auto flex flex-wrap lg:flex-nowrap items-start gap-16">
-        {/* Images Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full lg:w-1/2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full lg:w-1/2">
           <div className="relative group">
             <img
               src="Banner.jpg"
               alt="Organic Fertilizer Production"
-              className="rounded-xl shadow-lg object-cover w-full h-56 sm:h-72 md:h-80 lg:h-80 transition-transform duration-300 ease-in-out transform group-hover:scale-105"
+              className="rounded-xl shadow-lg object-cover w-full h-40 sm:h-56 md:h-72 lg:h-80 transition-transform duration-300 ease-in-out transform group-hover:scale-105 sm:group-hover:scale-100"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
@@ -18,15 +17,15 @@ const Info = () => {
             <img
               src="matthews.jpg"
               alt="Farming with Organic Fertilizer"
-              className="rounded-xl shadow-lg object-cover w-full h-56 sm:h-72 md:h-80 lg:h-80 transition-transform duration-300 ease-in-out transform group-hover:scale-105"
+              className="rounded-xl shadow-lg object-cover w-full h-40 sm:h-56 md:h-72 lg:h-80 transition-transform duration-300 ease-in-out transform group-hover:scale-105 sm:group-hover:scale-100"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
-          <div className="relative col-span-2 group">
+          <div className="relative col-span-1 sm:col-span-2 group">
             <img
               src="Bannner.jpg"
               alt="Green 4 Africa Facility"
-              className="rounded-xl shadow-lg object-cover w-full h-56 sm:h-72 md:h-80 lg:h-80 transition-transform duration-300 ease-in-out transform group-hover:scale-105"
+              className="rounded-xl shadow-lg object-cover w-full h-40 sm:h-56 md:h-72 lg:h-80 transition-transform duration-300 ease-in-out transform group-hover:scale-105 sm:group-hover:scale-100"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
@@ -56,10 +55,14 @@ const Info = () => {
               Lives.
             </h3>
             <ul className="space-y-4 text-lg text-gray-700">
-              <li>✔ Establish sustainable organic fertilizer for high farm yields.</li>
+              <li>
+                ✔ Establish sustainable organic fertilizer for high farm yields.
+              </li>
               <li>✔ Foster youth development through resourceful programs.</li>
               <li>✔ Encourage natural resource conservation and management.</li>
-              <li>✔ Slow down deforestation and address environmental challenges.</li>
+              <li>
+                ✔ Slow down deforestation and address environmental challenges.
+              </li>
             </ul>
           </div>
 
