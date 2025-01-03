@@ -39,7 +39,7 @@ const Info = () => {
               <span className="text-green-600">Organic Solutions</span>
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-2">
-              Green 4 Africa is located in Mzuzu City at Vigwagwa Market at
+              Green 4 Africa is located in Mzuzu City at Vigwagwa Market near
               Vigwagwa Dump-site. It is a new venture dedicated to improving
               environmental pollution control and preventing communicable
               diseases within the community.

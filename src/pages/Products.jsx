@@ -44,7 +44,7 @@ const Products = () => {
         "Reducing environmental impact through waste collection and recycling.",
       price: "$100",
       link: "/services/waste-collection",
-      image: "/Banner.jpg",
+      image: "/Waste.jpg",
     },
     {
       name: "Environmental Protection Training",
@@ -60,7 +60,7 @@ const Products = () => {
         "Teaching sustainable practices to enhance productivity and conservation.",
       price: "$50",
       link: "/services/sustainable-agriculture",
-      image: "/Banner.jpg",
+      image: "/Manure.jpg",
     },
   ];
 
