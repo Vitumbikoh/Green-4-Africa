@@ -46,7 +46,7 @@ const Header = () => {
             alt="Green 4 Africa"
             className="h-6 md:h-8 lg:h-10"
           />
-          <span className="text-base sm:text-md md:text-lg lg:text-2xl font-serif font-bold text-white">Green 4 Africa</span>
+          <span className="text-md sm:text-md md:text-lg lg:text-2xl font-serif font-bold text-white">Green 4 Africa</span>
         </Link>
 
         {/* Mobile Menu Toggle */}

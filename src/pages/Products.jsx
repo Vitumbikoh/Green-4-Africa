@@ -108,12 +108,12 @@ const Products = () => {
                   <p className="text-gray-600 text-sm mt-2">
                     {product.description}
                   </p>
-                  <div className="text-green-600 font-semibold mt-4">
+                  <div className="text-g4AGreen font-semibold mt-4">
                     {product.price}
                   </div>
                   <a
                     href={product.link}
-                    className="inline-block mt-4 text-sm text-blue-600 hover:underline"
+                    className="inline-block mt-4 text-sm text-g4AGreen hover:underline"
                   >
                     Learn More
                   </a>
@@ -148,7 +148,7 @@ const Products = () => {
                   </div>
                   <a
                     href={service.link}
-                    className="inline-block mt-4 text-sm text-blue-600 hover:underline"
+                    className="inline-block mt-4 text-sm text-g4AGreen hover:underline"
                   >
                     Learn More
                   </a>

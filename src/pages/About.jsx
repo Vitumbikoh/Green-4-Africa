@@ -18,7 +18,7 @@ const About = () => {
         style={{ backgroundImage: "url('/matthews.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <h2 className="text-4xl font-serif text-white font-bold">
+          <h2 className="text-4xl font-serif text-white font-bold px-10">
             About Green for Africa
           </h2>
         </div>
